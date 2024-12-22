@@ -2,6 +2,24 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/ui/carousel";
 import Link from "next/link";
 import { ChartBarIcon, CpuChipIcon, CloudArrowUpIcon, ChartPieIcon } from "@heroicons/react/24/outline";
+import path from 'path';
+import fs from 'fs';
+
+// Function to get image files
+function getImageFiles() {
+  const publicDir = path.join(process.cwd(), 'public', 'solution_images');
+  try {
+    if (!fs.existsSync(publicDir)) {
+      return [];
+    }
+    return fs.readdirSync(publicDir)
+      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
+      .map(file => `/solution_images/${file}`);
+  } catch (error) {
+    console.error('Error reading solution_images directory:', error);
+    return [];
+  }
+}
 
 const features = [
   {
@@ -35,12 +53,7 @@ const stats = [
 
 export default function Home() {
   // Get all images from the solution_images directory
-  const solutionImagesDir = path.join(process.cwd(), 'public/solution_images');
-  const imageFiles = fs.existsSync(solutionImagesDir) 
-    ? fs.readdirSync(solutionImagesDir)
-      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-      .map(file => `/solution_images/${file}`)
-    : ['/placeholder-app.png']; // Fallback to placeholder image
+  const imageFiles = getImageFiles();
 
   return (
     <div className="bg-gray-50">
