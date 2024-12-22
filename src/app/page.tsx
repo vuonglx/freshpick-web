@@ -164,44 +164,53 @@ export default function Home() {
       {/* How It Works Section */}
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Process</h2>
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="text-base font-semibold leading-7 text-primary-600">
+              How FreshPick Works
+            </h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              How Fresh Pick Works
+              Advanced Technology for Superior Produce Quality
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Our advanced system streamlines the entire produce inspection process, from initial scanning to final sorting decisions.
+              Our comprehensive system combines cutting-edge hardware and AI to deliver accurate fruit quality assessment
             </p>
           </div>
-
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-4 lg:gap-x-8">
               <div className="relative">
                 <div className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-primary-100 text-primary-600 text-xl font-bold">1</div>
                 <div className="pl-16">
-                  <h3 className="text-base font-semibold leading-7 text-gray-900">Image Capture</h3>
-                  <p className="mt-2 text-base leading-7 text-gray-600">High-resolution cameras capture detailed images of produce from multiple angles</p>
+                  <h3 className="text-base font-semibold leading-7 text-gray-900">Data Acquisition</h3>
+                  <p className="mt-2 text-base leading-7 text-gray-600">
+                    Our system employs spectral imaging sensors to analyze light absorption and reflection, moisture and gas sensors to measure ripeness indicators, and high-resolution cameras to capture detailed external features. This comprehensive data collection approach enables thorough assessment of internal quality, freshness, size, shape, color, and defects, with all data securely stored in our cloud infrastructure.
+                  </p>
                 </div>
               </div>
               <div className="relative">
                 <div className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-primary-100 text-primary-600 text-xl font-bold">2</div>
                 <div className="pl-16">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">AI Analysis</h3>
-                  <p className="mt-2 text-base leading-7 text-gray-600">Our neural networks analyze visual data to assess quality and detect defects</p>
+                  <p className="mt-2 text-base leading-7 text-gray-600">
+                    Advanced neural networks and deep learning models analyze visual and sensor data, extracting deep features that indicate produce quality. Our AI system fuses data from multiple sources, combining spectral analysis with image-based assessment and sensor readings to provide comprehensive quality evaluation and predictive spoilage analytics.
+                  </p>
                 </div>
               </div>
               <div className="relative">
                 <div className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-primary-100 text-primary-600 text-xl font-bold">3</div>
                 <div className="pl-16">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">Quality Assessment</h3>
-                  <p className="mt-2 text-base leading-7 text-gray-600">Produce is categorized based on freshness, size, and quality metrics</p>
+                  <p className="mt-2 text-base leading-7 text-gray-600">
+                    The system performs detailed evaluation of freshness, ripeness, size, shape, color, and potential defects. Our AI-powered grading system identifies non-conforming items and provides stakeholders with comprehensive metrics on defect rates, freshness levels, and sorting accuracy for continuous improvement.
+                  </p>
                 </div>
               </div>
               <div className="relative">
                 <div className="absolute flex items-center justify-center w-12 h-12 rounded-full bg-primary-100 text-primary-600 text-xl font-bold">4</div>
                 <div className="pl-16">
                   <h3 className="text-base font-semibold leading-7 text-gray-900">Sorting Decision</h3>
-                  <p className="mt-2 text-base leading-7 text-gray-600">Automated sorting systems execute decisions based on AI analysis</p>
+                  <p className="mt-2 text-base leading-7 text-gray-600">
+                    Real-time automated sorting integrates with existing conveyor systems and robotic arms to efficiently direct produce based on quality assessment. The system can be customized to specific quality standards, offering faster and more accurate sorting than manual methods while reducing labor costs and improving efficiency.
+                  </p>
                 </div>
               </div>
             </div>
