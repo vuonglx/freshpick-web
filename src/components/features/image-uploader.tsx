@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { PhotoIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 interface ImageUploaderProps {
   onImageSelect: (imageUrl: string) => void;
@@ -48,10 +49,12 @@ export function ImageUploader({ onImageSelect }: ImageUploaderProps) {
       <input {...getInputProps()} />
       {preview ? (
         <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-          <img
+          <Image
             src={preview}
             alt="Preview"
-            className="object-cover w-full h-full"
+            width={300}
+            height={300}
+            className="max-w-full h-auto rounded-lg"
           />
         </div>
       ) : (

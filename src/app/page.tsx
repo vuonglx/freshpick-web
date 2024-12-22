@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/ui/carousel";
 import Link from "next/link";
 import { ArrowRightIcon, ChartBarIcon, CpuChipIcon, CloudArrowUpIcon, ChartPieIcon } from "@heroicons/react/24/outline";
-import fs from 'fs';
-import path from 'path';
 
 const features = [
   {
@@ -133,7 +131,7 @@ export default function Home() {
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
               {features.map((feature) => (
-                <div key={feature.name} className="flex flex-col bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+                <div key={feature.name} className="relative pl-16">
                   <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
                     <feature.icon className="h-5 w-5 flex-none text-primary-600" aria-hidden="true" />
                     {feature.name}

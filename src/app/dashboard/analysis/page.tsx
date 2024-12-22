@@ -6,13 +6,21 @@ import { Card } from '@/components/ui/card';
 import { ImageUploader } from '@/components/features/image-uploader';
 import { AnalysisResult } from '@/components/features/analysis-result';
 
+interface AnalysisResult {
+  quality: string;
+  confidence: number;
+  defects?: string[];
+  ripeness: string;
+  recommendations: string[];
+}
+
 export default function AnalysisPage() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState<any>(null);
+  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
 
   const handleImageSelect = (imageUrl: string) => {
-    setSelectedImage(imageUrl);
+    setSelectedImage(imageUrl as unknown as File);
     setAnalysisResult(null);
   };
 
