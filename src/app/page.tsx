@@ -78,10 +78,12 @@ export default function Home() {
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 Reduce waste, improve quality, and optimize your supply chain with our advanced AI-driven produce inspection system.
               </p>
-              <div className="mt-10 flex items-center gap-x-6">
-                <Button asChild>
-                  <Link href="/contact">Get started</Link>
-                </Button>
+              <div className="mt-10 flex items-center justify-center gap-x-6">
+                <Link href="/contact">
+                  <Button variant="default" className="bg-white text-primary-600 hover:bg-gray-100">
+                    Get started
+                  </Button>
+                </Link>
                 <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -454,9 +456,11 @@ export default function Home() {
               Join industry leaders who are already benefiting from Fresh Pick&apos;s AI-powered solution.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-primary-600 shadow-sm hover:bg-gray-100">
-                Get started
-              </Button>
+              <Link href="/contact">
+                <Button variant="default" className="bg-white text-primary-600 hover:bg-gray-100">
+                  Get started
+                </Button>
+              </Link>
               <a href="#contact" className="text-sm font-semibold leading-6 text-white">
                 Contact sales <span aria-hidden="true">→</span>
               </a>
