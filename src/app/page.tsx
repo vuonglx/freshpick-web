@@ -121,7 +121,7 @@ export default function Home() {
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-primary-600">Advanced Technology</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Fresh Pick's AI-Driven Solution
+              Fresh Pick&apos;s AI-Driven Solution
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Our intelligent system uses cutting-edge AI and machine learning to assess freshness by analyzing images 
@@ -335,7 +335,7 @@ export default function Home() {
               Our Roadmap to Success
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Fresh Pick's strategic journey from development to market launch and beyond.
+              Fresh Pick&apos;s strategic journey from development to market launch and beyond.
             </p>
           </div>
 
@@ -438,7 +438,7 @@ export default function Home() {
               Ready to optimize your produce operations?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-              Join industry leaders who are already benefiting from Fresh Pick's AI-powered solution.
+              Join industry leaders who are already benefiting from Fresh Pick&apos;s AI-powered solution.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-primary-600 shadow-sm hover:bg-gray-100">
