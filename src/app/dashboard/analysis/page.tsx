@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ImageUploader } from '@/components/features/image-uploader';
-import { AnalysisResult } from '@/components/features/analysis-result';
+import { AnalysisResult as AnalysisResultComponent } from '@/components/features/analysis-result';
 
 interface AnalysisResult {
   quality: string;
   confidence: number;
-  defects?: string[];
+  defects: string[];
   ripeness: string;
   recommendations: string[];
 }
@@ -40,6 +40,14 @@ export default function AnalysisPage() {
       });
     } catch (error) {
       console.error('Analysis failed:', error);
+      // Set a default error result
+      setAnalysisResult({
+        quality: 'Error',
+        confidence: 0,
+        ripeness: 'Unknown',
+        defects: ['Analysis failed'],
+        recommendations: ['Please try again']
+      });
     } finally {
       setIsAnalyzing(false);
     }
@@ -84,7 +92,7 @@ export default function AnalysisPage() {
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600" />
             </div>
           ) : (
-            <AnalysisResult result={analysisResult} />
+            <AnalysisResultComponent result={analysisResult} />
           )}
         </Card>
       </div>

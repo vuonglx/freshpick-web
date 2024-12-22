@@ -5,14 +5,16 @@ import {
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
 
+interface AnalysisResult {
+  quality: string;
+  confidence: number;
+  defects: string[];
+  ripeness: string;
+  recommendations: string[];
+}
+
 interface AnalysisResultProps {
-  result: {
-    quality: string;
-    confidence: number;
-    ripeness: string;
-    defects: string[];
-    recommendations: string[];
-  } | null;
+  result: AnalysisResult | null;
 }
 
 export function AnalysisResult({ result }: AnalysisResultProps) {
