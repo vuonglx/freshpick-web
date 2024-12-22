@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Carousel } from "@/components/ui/carousel";
 import Link from "next/link";
-import { ArrowRightIcon, ChartBarIcon, CpuChipIcon, CloudArrowUpIcon, ChartPieIcon } from "@heroicons/react/24/outline";
+import { ChartBarIcon, CpuChipIcon, CloudArrowUpIcon, ChartPieIcon } from "@heroicons/react/24/outline";
 
 const features = [
   {
@@ -402,7 +402,7 @@ export default function Home() {
                     'Fixing bugs and optimizing systems'
                   ]
                 }
-              ].map((phase, index) => (
+              ].map((phase) => (
                 <div key={phase.date} className="relative pl-16 py-6">
                   {/* Timeline line */}
                   <div className="absolute left-0 top-0 h-full w-px bg-primary-200" />
@@ -415,8 +415,8 @@ export default function Home() {
                     <div className="text-sm font-semibold text-primary-600 mb-2">{phase.date}</div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-4">{phase.title}</h3>
                     <ul className="space-y-3">
-                      {phase.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start">
+                      {phase.items.map((item, index) => (
+                        <li key={index} className="flex items-start">
                           <div className="flex-shrink-0 h-1.5 w-1.5 rounded-full bg-primary-600 mt-2 mr-3" />
                           <span className="text-gray-600">{item}</span>
                         </li>
